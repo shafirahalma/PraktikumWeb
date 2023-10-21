@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    body {
+        background-color: rgb(146, 142, 142);
+    }
+
+    .container {
+        padding: 30px;
+        border: 2px solid;
+        position: relative;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(213, 151, 172);
+    }
+
+    h1 {
+        margin-top: 50px;
+        text-align: center;
+        font-style: oblique;
+        flex-direction: column-reverse;
+    }
+
+    .tombol {
+        background-color: aqua;
+        text-align: center;
+        padding: 5px;
+        width: 50px;
+    }
+
+    .hapus {
+        background-color: rgb(231, 46, 46);
+        text-align: center;
+        padding: 5px;
+        width: 50px;
+    }
+
+    .tabel {
+        margin: 10px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Sederhana</title>
+</head>
+<script type="text/javascript">
+    function tambah() {
+        var bilangan1 = parseFloat(document.calculator.bilangan1.value);
+        var bilangan2 = parseFloat(document.calculator.bilangan2.value);
+        var hasil = bilangan1 + bilangan2;
+        document.calculator.hasil.value = hasil;
+    }
+
+    function kurang() {
+        var bilangan1 = parseFloat(document.calculator.bilangan1.value);
+        var bilangan2 = parseFloat(document.calculator.bilangan2.value);
+        var hasil = bilangan1 - bilangan2;
+        document.calculator.hasil.value = hasil;
+    }
+
+    function bagi() {
+        var bilangan1 = parseFloat(document.calculator.bilangan1.value);
+        var bilangan2 = parseFloat(document.calculator.bilangan2.value);
+        var hasil = bilangan1 / bilangan2;
+        document.calculator.hasil.value = hasil;
+    }
+
+    function kali() {
+        var bilangan1 = parseFloat(document.calculator.bilangan1.value);
+        var bilangan2 = parseFloat(document.calculator.bilangan2.value);
+        var hasil = bilangan1 * bilangan2;
+        document.calculator.hasil.value = hasil;
+    }
+
+    function modulus() {
+        var bilangan1 = parseFloat(document.calculator.bilangan1.value);
+        var bilangan2 = parseFloat(document.calculator.bilangan2.value);
+        var hasil = bilangan1 % bilangan2;
+        document.calculator.hasil.value = hasil;
+    }
+</script>
+
+<body>
+    <h1>Calculator Sederhana 2023</h1>
+    <div class="container">
+        <form name="calculator">
+            <table class="tabel" cellpadding="10">
+                <tr>
+                    <td>Bilangan 1</td>
+                    <td>:</td>
+                    <td><input type="number" name="bilangan1"></td>
+                </tr>
+                <tr>
+                    <td>Bilangan 2</td>
+                    <td>:</td>
+                    <td><input type="number" name="bilangan2"></td>
+                </tr>
+                <tr>
+                    <td>Hasil</td>
+                    <td>:</td>
+                    <td> <input type="number" name="hasil" disabled></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input class="tombol" type="button" onclick="tambah()" value="+">
+                        <input class="tombol" type="button" onclick="kurang()" value="-">
+                        <input class="tombol" type="button" onclick="bagi()" value="/">
+                        <input class="tombol" type="button" onclick="kali()" value="*">
+                        <input class="tombol" type="button" onclick="modulus()" value="%">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input class="hapus" type="reset" value="C">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

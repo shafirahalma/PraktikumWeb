@@ -1,0 +1,21 @@
+.container {
+    padding : 30px;
+    position :relative;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-color: rgb(216, 186, 111);
+    border-radius: 5px;
+    box-shadow:rgb(122, 130, 114) 0px 3px 5px;
+}
+h1 {
+    text-align: center;
+    margin-top: 60px;
+}
+.container table thead {
+    background-color:beige;
+}
+
+

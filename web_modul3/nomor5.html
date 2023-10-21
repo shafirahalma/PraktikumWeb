@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomor 1</title>
+
+    <style>
+        body {
+            background-color: rgb(184, 156, 156);
+        }
+
+        h1 {
+            margin-top: 50px;
+            text-align: center;
+            font-style: oblique;
+            flex-direction: column-reverse;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px;
+            border: 2px solid;
+            position: relative;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(244, 181, 164);
+        }
+
+        .tombol {
+            background-color: bisque;
+            text-align: center;
+            padding: 5px;
+            width: 65px;
+        }
+    </style>
+</head>
+
+<script>
+    function convert() {
+        var nilai = document.kirim.Angka.value;
+        var hasil = "";
+
+        if (nilai >= 0 && nilai <= 40) {
+            hasil = "E"
+        } else if (nilai >= 41 && nilai <= 55) {
+            hasil = "D"
+        } else if (nilai >= 56 && nilai <= 60) {
+            hasil = "C"
+        } else if (nilai >= 61 && nilai <= 65) {
+            hasil = "BC"
+        } else if (nilai >= 66 && nilai <= 70) {
+            hasil = "B"
+        } else if (nilai >= 71 && nilai <= 80) {
+            hasil = "AB"
+        } else if (nilai >= 81 && nilai <= 100) {
+            hasil = "A"
+        } else {
+            hasil = "melampaui batas"
+        }
+
+        document.kirim.Huruf.value = hasil;
+    }
+</script>
+
+<body>
+    <h1>Konfersi Nilai Sederhana 2023</h1>
+    <div class="container">
+        <h3>Masukkan Nilai Antara 0-100 !</h3>
+        <form method="POST" name="kirim">
+            <table>
+                <tr>
+                    <td><label>Nilai Angka :</label></td>
+                    <td><input type="text" name="Angka" size="25"></td>
+                </tr>
+                <tr>
+                    <td><label>Nilai Huruf :</label></td>
+                    <td><input type="text" name="Huruf" size="25"></td>
+                </tr>
+            </table>
+            <p>
+                <input class="tombol" type="button" value="konversi" name="B1" onclick="convert()">
+                <input class="tombol" type="reset" value="Reset">
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
